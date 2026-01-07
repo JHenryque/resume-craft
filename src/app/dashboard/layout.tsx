@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Logo from "@/assets/logo.svg";
+
 type DashboardLayoutProps = {
   children: React.ReactNode;
 };
@@ -5,8 +8,12 @@ type DashboardLayoutProps = {
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <div className="w-full h-screen overflow-hidden grid grid-cols-[300px_1fr]">
-      <aside>
-        <p>Saibar</p>
+      <aside className="w-full h-full flex flex-col items-center border-r border-muted">
+        <div className="w-full p-6 border-b border-muted">
+          <Link href="/dashboard/resumes">
+            <Logo className="max-w-[100px] mx-auto" />
+          </Link>
+        </div>
       </aside>
       <main>{children}</main>
     </div>
