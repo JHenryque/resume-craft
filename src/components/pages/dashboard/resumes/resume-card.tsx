@@ -1,0 +1,44 @@
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
+type ResumeCardButtonProps = {
+  title?: string;
+  description: string;
+  icon?: React.ReactNode;
+};
+
+export function ResumeCardButton({
+  title,
+  description,
+  icon,
+}: ResumeCardButtonProps) {
+  return (
+    <button
+      className={cn(
+        "relative w-full h-[300px] bg-muted/50 rounded border border-muted-foreground/20",
+        "flex items-center justify-center outline-none, overflow-hidden",
+        "hover:brightness-105 dark:hover:brightness-125 transition-all",
+      )}
+    >
+      {icon}
+
+      <div className="absolute w-full left-0 bottom-0 p-3 text-left bg-gradient-to-t from-background/80">
+        <p className="text-sm font-semibold font-title">{title}</p>
+        <span className="block text-xs text-muted-foreground">
+          {description}
+        </span>
+      </div>
+    </button>
+  );
+}
+
+export default function ResumeCard() {
+  return (
+    <Link href="/dashboard/resumes/example" className="block w-full">
+      <ResumeCardButton
+        title="Meu Currículo"
+        description="Última atualização: 20 de junho de 2024"
+      />
+    </Link>
+  );
+}

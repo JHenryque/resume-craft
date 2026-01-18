@@ -18,14 +18,13 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             <img
               src="/_next/static/media/logo.a25c1e12.svg"
               alt="Logo"
-              className="max-w-[100px] mx-auto"
+              className="max-w-[100px] mx-auto dark:invert"
             />
             {/* <Logo className="max-w-[100px] mx-auto" /> */}
           </Link>
         </div>
         <NavItems />
         <div className="w-full mt-auto border-t border-muted px-3 py-4 flex items-center justify-between gap-2 ">
-          {/* &copy; {new Date().getFullYear()} Resume Craft */}
           <UserDropdown />
           <ThemeToggle />
         </div>

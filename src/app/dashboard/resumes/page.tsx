@@ -1,7 +1,11 @@
+import ResumesLista from "@/components/pages/dashboard/resumes/resumes-list";
+
 export default function DashboardResumesPages() {
   return (
     <>
-      <h1>Curriculos</h1>
+      <h1 className="text-4xl font-title font-bold mb-6">Curriculos</h1>
+
+      <ResumesLista />
     </>
   );
 }
