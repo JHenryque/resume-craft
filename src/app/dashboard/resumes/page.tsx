@@ -1,7 +1,7 @@
 export default function DashboardResumesPages() {
   return (
     <>
-      <div>Dashboard Resumes Pages</div>
+      <h1>Curriculos</h1>
     </>
   );
 }
